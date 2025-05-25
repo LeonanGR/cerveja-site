@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black's Beer</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" type="imagex/png" href="./images/logo.png">
+</head>
+
+<body>
+  <!-- Botão do menu móvel (mobile) -->
+  <button id="menu-toggle" class="menu-toggle">
+    <i class="fas fa-bars" id="menu-icon"></i>
+  </button>
+
+  <!-- Barra lateral -->
+  <div class="sidebar" id="sidebar">
+    <div class="logo-container">
+      <img src="./images/logo.png" alt="Black's Beer Logo" class="logo">
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#black's-beer" class="nav-link active">Black's Beer</a></li>
+        <li><a href="#receita" class="nav-link">Receita</a></li>
+        <li><a href="#controlador-de-temperatura" class="nav-link">Controlador de Temperatura</a></li>
+        <li><a href="#galeria" class="nav-link">galeria</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <!-- Efeito de desfoque no fundo -->
+    <div class="background-blur"></div>
+
+    <div class="content-container">
+      <section id="black's-beer" class="section">
+        <h1 class="section-title">Black's Beer</h1>
+        <p class="section-text">
+          Bem-vindo ao universo da Black's Beer,
+          onde cada gole revela a intensidade e a personalidade de uma cerveja
+          feita para quem busca muito mais do que apenas saciar a sede. Aqui,
+          a escuridão não é apenas cor: é sinônimo de sabor profundo, aromas marcantes e experiências inesquecíveis.
+        </p>
+        <p class="section-text">
+          Somos movidos pela paixão por brindar momentos especiais: seja um encontro com amigos,
+          uma celebração íntima ou apenas a pausa merecida depois de um dia intenso. Convidamos você a explorar nosso portfólio,
+          descobrir a combinação ideal para o seu paladar e mergulhar na proposta Black's: cerveja com personalidade,
+          feita para quem não tem medo de se aventurar no sabor. Desperte seus sentidos. Descubra o prazer em cada tom de preto. Bem-vindo à Black's Beer!
+        </p>
+      </section>
+
+      <section id="receita" class="section">
+        <h2 class="section-title">Receita</h2>
+        <div class="receita-card">
+          <h3 class="receita-title">Belgian Blond Ale</h3><br>
+          <div class="receita-grid">
+            <div class="receita-column">
+              <h4 class="receita-subtitle">Ingredientes</h4> <br>
+
+              <p class="receita-subtitle">GRÃOS</p>
+              <p class="receita-text">
+                Malte Pilsen - 0,65kg <br>
+                Malte Cara Pils - 0,07kg <br>
+                Malte Melanoidina - 0,05kg <br>
+                Flocos de Aveia - 0,05kg <br><br>
+              </p>
+
+              <p class="receita-subtitle">ADJUNTOS</p>
+              <p class="receita-text">
+                Açúcar de Cana - 0,075kg <br>
+                Semente de Coentro (moída) - 2,0g <br>
+                Casca de Laranja (sem a parte branca) - 3,0g <br><br>
+              </p>
+
+              <p class="receita-subtitle">LÚPULO</p>
+              <p class="receita-text">
+                Tettnang - 8g <br><br>
+              </p>
+
+              <p class="receita-subtitle">FERMENTO</p>
+              <p class="receita-text">
+                Fermentis SafAle S33 - 2,5g <br><br>
+              </p>
+
+              <p class="receita-subtitle">ÁGUA</p>
+              <p class="receita-text">
+                Total de água: 5,7L <br><br>
+              </p>
+
+            </div>
+            <div class="receita-column">
+              <h4 class="receita-subtitle">Instruções</h4> <br>
+
+              <p class="receita-subtitle">RAMPA</p>
+              <p class="receita-text">
+                Aquecer a água primária até atingir 42°C. <br>
+                42°C - derrubar o malte e manter por 10', após estabilizar a temperatura; <br>
+                50°C - por 10'; <br>
+                66°C - manter por 60' (fazendo o teste de iodo); <br>
+                78°C - por 10' (mash out). <br>
+                Em paralelo, aquecer a água de sparge até 78°C. <br><br>
+              </p>
+
+              <p class="receita-subtitle">FERVURA</p>
+              <p class="receita-text">
+                Tempo total: 60' <br>
+                Lúpulo Tettnag - 8g - 50' <br>
+                Açúcar - 0,075g - 15' <br>
+                Casca de Laranja - 3g - 5' <br>
+                Semente de Coentro - 2g - 5' <br><br>
+              </p>
+              
+              <p class="receita-subtitle">FERMENTAÇÃO</p>
+              <p class="receita-text">
+                S33 - 2,5g - 20°C <br><br>
+              </p>
+
+              <p class="receita-subtitle">ENVASE</p>
+              <p class="receita-text">
+                Priming - 3g/L de açúcar <br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="controlador-de-temperatura" class="section">
+        <h2 class="section-title">Controlador de Temperatura</h2>
+
+        <div class="galeria-grid">  <div class="galeria-item"> <div>
+              <h4 class="receita-subtitle">Circuito</h4>
+              <img src="./images/circuito.jpg" alt="Imagem do Circuito Eletrónico" style="width: 100%; max-height: 200px; object-fit: contain; border-radius: 0.25rem; margin-top: 0.5rem;">
+            </div>
+          </div>
+
+          <div class="galeria-item"> <div>
+              <h4 class="receita-subtitle">Esquemático</h4>
+              <img src="./images/esquemático.jpg" alt="Imagem do Esquemático Eletrónico" style="width: 100%; max-height: 200px; object-fit: contain; border-radius: 0.25rem; margin-top: 0.5rem;">
+            </div>
+          </div>
+
+          <div class="galeria-item"> <div>
+              <h4 class="receita-subtitle">Placa PCB</h4>
+              <img src="./images/placa.jpg" alt="Imagem da Placa de Circuito Impresso" style="width: 100%; max-height: 200px; object-fit: contain; border-radius: 0.25rem; margin-top: 0.5rem;">
+            </div>
+          </div>
+
+          <div class="galeria-item"> <div>
+              <h4 class="receita-subtitle">Trilha</h4>
+              <img src="./images/trilha.jpg" alt="Imagem das Trilhas da Placa" style="width: 100%; max-height: 200px; object-fit: contain; border-radius: 0.25rem; margin-top: 0.5rem;">
+            </div>
+          </div>
+
+        </div>
+
+        <p class="section-text" style="margin-top: 2rem;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed
+          erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+        </p>
+        <p class="section-text">
+          Suspendisse in orci enim. Donec suscipit ante in hendrerit placerat. Etiam diam elit, hendrerit sit amet
+          placerat a, commodo at turpis. Sed porttitor, odio in blandit ornare, arcu risus pulvinar ante.
+        </p>
+      </section>
+
+      <section id="galeria" class="section">
+        <h2 class="section-title">galeria</h2>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <p class="galeria-placeholder">Imagem da galeria 1</p>
+          </div>
+          <div class="galeria-item">
+            <p class="galeria-placeholder">Imagem da galeria 2</p>
+          </div>
+          <div class="galeria-item">
+            <p class="galeria-placeholder">Imagem da galeria 3</p>
+          </div>
+          <div class="galeria-item">
+            <p class="galeria-placeholder">Imagem da galeria 4</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
