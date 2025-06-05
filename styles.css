@@ -1,17 +1,14 @@
 /* Estilos base */
-/* Reset básico para remover margens e paddings padrão dos navegadores e ajustar o modelo de caixa */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Define a rolagem suave para links de âncora (ex: #secao) */
 html {
   scroll-behavior: smooth;
 }
 
-/* Estilos principais para o corpo da página */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #f4f4f5;
@@ -20,7 +17,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Estilização da barra de rolagem */
 body {
   scrollbar-width: thin;
   scrollbar-color: #71717a #27272a;
@@ -39,7 +35,6 @@ body {
   border-radius: 20px;
 }
 
-/* Botão do menu móvel (hambúrguer) */
 .menu-toggle {
   position: fixed;
   top: 1rem;
@@ -58,15 +53,12 @@ body {
   height: 40px;
 }
 
-/* Media Query para telas maiores (a partir de 768px de largura) */
 @media (min-width: 768px) {
-  /* Esconde o botão do menu móvel em telas maiores, pois a barra lateral estará visível */
   .menu-toggle {
     display: none;
   }
 }
 
-/* Barra lateral */
 .sidebar {
   position: fixed;
   top: 0;
@@ -82,34 +74,28 @@ body {
   z-index: 40;
 }
 
-/* Classe adicionada via JavaScript para mostrar a barra lateral em telas menores */
 .sidebar.open {
-  transform: translateX(0); /* Move a barra lateral para a posição visível */
+  transform: translateX(0);
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
-  /* Em telas maiores, a barra lateral é sempre visível e posicionada corretamente */
   .sidebar {
     transform: translateX(0);
   }
 }
 
-/* Contêiner do logo na barra lateral */
 .logo-container {
   padding: 1rem;
   display: flex;
   justify-content: center;
 }
 
-/* Estilo do logo */
 .logo {
   width: 120px;
   height: 120px;
-  border-radius: 50%; /* Deixa o logo redondo */
+  border-radius: 50%;
 }
 
-/* Navegação da barra lateral */
 .sidebar-nav {
   flex: 1;
   padding: 0 1rem;
@@ -121,10 +107,9 @@ body {
 }
 
 .sidebar-nav li {
-  margin-bottom: 1rem; /* Espaçamento entre os itens da lista */
+  margin-bottom: 1rem;
 }
 
-/* Links de navegação na barra lateral */
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
@@ -134,27 +119,22 @@ body {
   transition: background-color 0.2s;
 }
 
-/* Estilo do link ao passar o mouse ou quando está ativo */
 .nav-link:hover, .nav-link.active {
   background-color: #3f3f46;
 }
 
-/* Conteúdo principal da página */
 .main-content {
-  position: relative; /* Necessário para o z-index do .background-blur funcionar corretamente */
+  position: relative;
   flex: 1;
   min-height: 100vh;
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
-  /* Adiciona uma margem à esquerda no conteúdo principal para acomodar a barra lateral */
   .main-content {
     margin-left: 16rem;
   }
 }
 
-/* Imagem de fundo com efeito de desfoque */
 .background-blur {
   position: fixed;
   inset: 0;
@@ -163,10 +143,9 @@ body {
   background-image: url('./images/logo.png');
   background-size: cover;
   background-position: center;
-  filter: blur(8px); /* Aplica o efeito de desfoque */
+  filter: blur(8px);
 }
 
-/* Contêiner para o conteúdo das seções */
 .content-container {
   position: relative;
   z-index: 10;
@@ -175,20 +154,17 @@ body {
   margin: 0 auto;
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
   .content-container {
     padding: 2.5rem;
   }
 }
 
-/* Estilos gerais para as seções */
 .section {
   min-height: 100vh;
   padding: 4rem 0;
 }
 
-/* Títulos das seções */
 .section-title {
   font-size: 2.25rem;
   font-weight: bold;
@@ -196,21 +172,18 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
   .section-title {
     font-size: 3.75rem;
   }
 }
 
-/* Texto dentro das seções */
 .section-text {
   font-size: 1.125rem;
   color: #d4d4d8;
   margin-bottom: 1rem;
 }
 
-/* Galeria de Imagens */
 .galeria-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -218,30 +191,77 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
   .galeria-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Item individual da galeria */
 .galeria-item {
-  background-color: #27272a;
-  padding: 1rem;
+  background-color: #27272a; 
+  padding: 1rem;            
   border-radius: 0.5rem;
-  height: 16rem;
+  height: 16rem; 
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; 
 }
 
-/* Placeholder de texto para os itens da galeria */
+#controlador-de-temperatura .galeria-item,
+#galeria .galeria-item { 
+  background-color: transparent;
+  padding: 0;
+  height: auto; 
+}
+
+.galeria-first-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem; 
+}
+
+.galeria-first-image-container .galeria-item {
+  width: auto; 
+  max-width: 60%; 
+}
+.galeria-first-image-container .galeria-item img{
+  max-height: 60vh; 
+}
+
+.media-9x16-grid.galeria-grid {
+  /* Mantém as 2 colunas em desktop da .galeria-grid */
+}
+
+.media-9x16-grid .galeria-item {
+  aspect-ratio: 9 / 16; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+}
+
+.media-9x16-grid .galeria-item .clickable-gallery-media { 
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+  cursor: pointer;
+}
+
+.galeria-separator {
+  margin: 2.5rem auto;
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background-color: #3f3f46;
+}
+
 .galeria-placeholder {
   color: #71717a;
 }
 
-/* Seção da Receita */
 .receita-card {
   background-color: #27272a;
   padding: 1.5rem;
@@ -249,7 +269,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Título dentro do card da receita*/
 .receita-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -258,21 +277,18 @@ body {
   text-align: center;
 }
 
-/* Grid para organizar ingredientes e instruções lado a lado */
 .receita-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-/* Media Query para telas maiores */
 @media (min-width: 768px) {
   .receita-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Subtítulos dentro da receita */
 .receita-subtitle {
   font-size: 1.25rem;
   font-weight: 500;
@@ -281,21 +297,114 @@ body {
   text-align: center;
 }
 
-/* Texto normal da receita */
 .receita-text {
   color: #d4d4d8;
   text-align: center;
 }
 
-#controlador-de-temperatura .galeria-item {
-  background-color: transparent; /* Remove a cor de fundo, tornando-o transparente */
-  padding: 0;
-}
-
-/* Ajuste para o conteúdo (div interna) dentro do .galeria-item transparente na secção do controlador */
 #controlador-de-temperatura .galeria-item > div {
   display: flex;
   flex-direction: column; 
   align-items: center;
   text-align: center;
+}
+
+/* Estilos para o Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.lightbox-overlay.open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-content-img,
+.lightbox-content-video {
+  max-width: 90%;
+  max-height: 80%; 
+  display: block; 
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.lightbox-content-video {
+  max-width: calc(85vh * (9 / 16)); 
+  max-height: 85vh; 
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 1002; 
+}
+
+.lightbox-close:hover {
+  color: #bbb;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1002; 
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.lightbox-prev {
+  left: 15px;
+  border-radius: 0 3px 3px 0;
+}
+
+.lightbox-next {
+  right: 15px;
+  border-radius: 3px 0 0 3px;
+}
+
+.lightbox-caption {
+  text-align: center;
+  color: #ccc;
+  padding: 8px 15px; 
+  position: absolute;
+  top: 25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto; 
+  max-width: 70%; 
+  font-size: 1.1em; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  border-radius: 4px;
+  z-index: 1001; 
 }
